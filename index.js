@@ -62,7 +62,7 @@ const displayQuiz = (data) => {
 
   
     data.forEach((quiz, i) => {
-      console.log("Quiz", quiz);
+      // console.log("Quiz", quiz);
 
       const div = document.createElement("div");
       div.classList.add("m-3", "py-3", "px-4", "shadow-sm", "rounded");
@@ -82,7 +82,7 @@ const displayQuiz = (data) => {
 
   });
 };
-//  ${displayQuizOptions(quiz.options, i)}
+
 // EventListener for quiz submit button
 document.querySelector("#submit").addEventlistener("click", () => {
   if (answers.length < 6) {
@@ -101,6 +101,7 @@ document.querySelector("#submit").addEventlistener("click", () => {
   };
 
   for (let ans of answers) {
+ 
     if (ans.answer === ans.givenAns) {
       totalMark += 10;
     }
@@ -147,6 +148,7 @@ document.querySelector("#submit").addEventlistener("click", () => {
   // Right side bar/ answer section
   let x = setTimeout(() => {
     showAnswers(answers);
+    
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
