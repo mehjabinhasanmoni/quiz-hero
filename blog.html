@@ -62,16 +62,16 @@
             </h1>
           </div>
           <div class="blog-answer m-5 p-5 bg-slate-50">
-            <p class="text-xl mb-5">
+            <p class="text-lg mb-5">
                 <strong>map</strong> method receives a function as a parameter. Then it applies it on each element and returns an entirely new array populated with the results of calling the provided function.
             </p>
-            <p class="text-xl mb-5">
+            <p class="text-lg mb-5">
                 <strong>forEach() </strong>is used to execute the same code on every element in an array but does not change the array and it returns undefined.
             </p>
-            <p class="text-xl mb-5">
+            <p class="text-lg mb-5">
                 <strong>filter()</strong> checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.
             </p>
-            <p class="text-xl mb-5">
+            <p class="text-lg mb-5">
                 <strong>find() </strong>is a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.
             </p>
 
@@ -164,15 +164,63 @@
         <section class="p-5">
           <div class="blog-ques m-5 p-5 bg-slate-200">
             <h1 class="text-2xl font-semibold">
-              How will you select HTML elements using DOM? Name the DOM methods?
+                Difference Between Local Storage, Session Storage, And Cookies
             </h1>
           </div>
           <div class="blog-answer m-5 p-5 bg-slate-50">
-            <p class="text-xl mb-5">
-              At first, we can select elements by tagname,classname,id using those
-              javaScript DOM Methods. They are getElementsByID(),
-              getElementsBYTagName(), querySelector(), querySelectorAll().
+            <p class="text-lg mb-5">
+              <strong>Local Storage</strong>read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions.
             </p>
+            <p class="text-lg mb-5">
+                <strong>Session Storage</strong> can be accessed using the sessionStorage read-only property. The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.
+            </p>
+            <p class="text-lg mb-5">
+                <strong>Cookies</strong>The term “cookie” refers to just the textual information about a website. In order to recognize you and show you results according to your preferences, this website saves some information in your local system when you visit a particular website. The history of the internet has long been marked by the use of cookies. 
+            </p>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Local Storage</th>
+                      <th> Session Storage</th>
+                      <th>Cookies</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <th>1</th>
+                      <td><p>The storage capacity of local storage is 5MB/10MB</p></td>
+                      <td><p>The storage capacity of session storage is 5MB</p></td>
+                      <td><p>The storage capacity of Cookies is 4KB</p></td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr class="hover">
+                      <th>2</th>
+                      <td>The client  can only read local storage</td>
+                      <td>The client can only read local storage</td>
+                      <td>Both clients and servers can <br>read and write the cookies</td>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                      <th>3</th>
+                      <td>There is no transfer of data to the server</td>
+                      <td>There is no transfer of data to the server</td>
+                      <td>Data transfer to the server is exist</td>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr>
+                        <th>4</th>
+                        <td>Has SSL Support</td>
+                        <td>Has no SSL support</td>
+                        <td>Has no SSL support</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+
             <a
               href=""
               class="m-2 underline text-lg decoration-sky-600 hover:decoration-blue-900 hover:text-blue-900 hover:font-semibold"
@@ -190,12 +238,24 @@
   
         <section class="p-5">
           <div class="blog-ques m-5 p-5 bg-slate-200">
-            <h1 class="text-2xl font-semibold">What is event bubble?</h1>
+            <h1 class="text-2xl font-semibold">What is Event Loop?how does it works?</h1>
           </div>
           <div class="blog-answer m-5 p-5 bg-slate-50">
-            <p class="text-xl mb-5">
-              Event bubbole is related to hiararchical of an event. When an event is triggered on a DOM element its act like a bubbole and  it "bubbles" up the DOM tree, triggering any event
-              listeners that have been registered on each parent element along the way.
+            <p class="text-lg mb-5">
+                JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events,<br> and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+            </p>
+            <p class="text-lg mb-5">
+                The <strong>event loop</strong> is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures,<br> it gives us the illusion of multi-threading. Let’s take a look at what happens on the back-end.
+            </p>
+            <p class="text-lg mb-5">
+                Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.<br>
+
+            </p>
+            <p class="text-lg mb-5">Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+
+            </p>
+            <p class="text-lg mb-5">
+                The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
             </p>
             <a
               href=""
@@ -215,18 +275,15 @@
         <section class="p-5">
           <div class="blog-ques m-5 p-5 bg-slate-200">
             <h1 class="text-2xl font-semibold">
-              What is a callback function and why will you use it?
+              what is quizTimer() ? how does it works in noChange.js file?
             </h1>
           </div>
           <div class="blog-answer m-5 p-5 bg-slate-50">
             <p class="text-xl mb-5">
-              A function that called after main function successfully executions
-              it's called Callback Function.which means that the program can
-              continue to run while the operation is being executed.<br />
-              <strong>Why we use it</strong><br />
-              If we need an operation that will be trigger after another operation
-              executions then we should use callback function. We can passed it as
-              an argument of the main function.
+              <strong>quizTimer()</strong> basically used for handle the timer.here we pass one paremeter which name is dismiss.<br>
+              firstly we check if condition and pass clearInterval() which is generate from index.js file.here we create another funtion which is setInterval().<br>
+              here we get id,minute,modulus value.and using ternary operator we find min,countsec.<br>
+              we create a HTML using `` and check count > 60  then check count % 2 === 0 then change text-color class add/remove from above HTML element.
             </p>
             <a
               href=""
@@ -240,6 +297,34 @@
             ></a>
           </div>
         </section>
+
+
+        <!--  Question-5 -->
+
+        <section class="p-5">
+            <div class="blog-ques m-5 p-5 bg-slate-200">
+              <h1 class="text-2xl font-semibold">
+                what is chooseQuiz() ? how does it works in noChange.js file?
+              </h1>
+            </div>
+            <div class="blog-answer m-5 p-5 bg-slate-50">
+              <p class="text-xl mb-5">
+                <strong>chooseQuiz()</strong> basically used for select or choose quiz answer.here we pass two paremeter which name is index and givenAns.<br>
+                here we used find() to get isExist value.then we use for of loop and check inside exist.id === quiz.id.if true then we splice given answer and break for get out from loop.<br>
+                else we push answer.after that displayAnswers() is working for givenanser show.
+              </p>
+              <a
+                href=""
+                class="m-2 underline text-lg decoration-sky-600 hover:decoration-blue-900 hover:text-blue-900 hover:font-semibold"
+                >Comments <i class="fa-regular fa-comment p-2"></i
+              ></a>
+              <a
+                href=""
+                class="underline text-lg decoration-sky-600 hover:decoration-blue-900 hover:text-blue-900 hover:font-semibold"
+                >Share <i class="fa-solid fa-share p-2"></i
+              ></a>
+            </div>
+          </section>
    <footer></footer>
 
 
