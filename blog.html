@@ -100,36 +100,42 @@
                     <tr class="hover">
                       <th>2</th>
                       <td>
-                        <br>let cost = [100,400,300,700];<br>
+                        <code>let cost = [60,100,200,500];<br>
                             let newCost = cost.map(function(costItem){ return costItem / 10;
                             });<br>
                             console.log(newCost);<br>
-                        </p>
+                            It will log [6,10,20,50]
+                            
+                        </code>
                     </td>
 
                       <td>
-                        <p>
-                            let food = ['mango','rice','pepper','pear'];<br>
-                        food.forEach(function(foodItem){ console.log('I want to eat '+foodItem);
-                        });<br>
-                        </p>
+                        <code>
+                            let foods = ['mango','rice','banana','tomato'];<br>
+                        foods.forEach((item)=> {console.log('Printing: '+item)});<br>
+                        It will log:<br>
+                        Printing:mango<br>
+                        Printing:rice<br>
+                        Printing:banana<br>
+                        Printing:tomato
+                        </code>
                     </td>
                       <td>
-                        <p>
-                        let cost = [100,400,50,40,700];<br>
-                        let smallCost = cost.filter(function(costItem){ return costItem < 200
-                        });<br>
-                        console.log(smallCost);<br>
-                        </p>
+                        <code>
+                        let ages = [12,18,50,56,70];<br/>
+                        let filteredAge = ages.filter((age)=>age <= 20);<br/>
+                        console.log(filteredAge);<br/>
+                        It will log [12,18]
+                        </code>
                         
                       </td>
                       <td>
-                        <p>
-                            let cost = [100,400,50,40,700];<br>
-                            let smallCost = cost.find(function(costItem){ return costItem < 200
-                            });<br>
-                            console.log(smallCost);<br>
-                        </p>
+                        <code>
+                            let ages = [12,18,50,56,70];<br/>
+                            let findAge = ages.find((age)=>age < 20);<br/>
+                            console.log(findAge);<br/>
+                            It will log 12
+                        </code>
                        
                     </td>
                     </tr>
