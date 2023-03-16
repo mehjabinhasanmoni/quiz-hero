@@ -119,7 +119,7 @@ document.getElementById('submit').addEventListener('click',function(){
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("result"));
+  let storage = JSON.parse(localStorage.getItem("results"));
   if (storage) {
     localStorage.setItem(
       "results",
@@ -195,6 +195,9 @@ document.getElementById('submit').addEventListener('click',function(){
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+
+
 
 // document.getElementById('submit').addEventlistener('click', function(){
 //   if (answers.length < 6) {
