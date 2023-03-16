@@ -18,6 +18,8 @@
     />
     
     <title>Blogs</title>
+    <!-- DaisyUI & Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -56,28 +58,94 @@
         <section class="p-5">
           <div class="blog-ques m-5 p-5 bg-slate-200">
             <h1 class="text-2xl font-semibold">
-              What is DOM? What is the purpose of DOM?
+             Write the  Difference between Map(),Filter(),forEach() and Find()?
             </h1>
           </div>
           <div class="blog-answer m-5 p-5 bg-slate-50">
             <p class="text-xl mb-5">
-              DOM stands for <strong>Document Object Model</strong>. It's allows
-              us to create, change, or remove elements from the documents. Easily
-              we can add events of these elements to make our page more dynamic.
-              HTML is used to structure the web pages and Javascript is used to
-              add behavior to our web pages. When an HTML file is loaded into the
-              browser, the javascript can't understand the HTML document directly.
-              So, a corresponding document is created(DOM). DOM is basically the
-              representation of the same HTML document but in a different format
-              with the use of objects.
+                <strong>map</strong> method receives a function as a parameter. Then it applies it on each element and returns an entirely new array populated with the results of calling the provided function.
             </p>
             <p class="text-xl mb-5">
-              <strong class="text-xl mb-5">Purpose of DOM</strong><br />
-              We can create a applications that update the data of the page
-              without refresh.also we can easily create a applications by user and
-              change it without refresh. we can easily create element,find
-              ID,tag,select query.
+                <strong>forEach() </strong>is used to execute the same code on every element in an array but does not change the array and it returns undefined.
             </p>
+            <p class="text-xl mb-5">
+                <strong>filter()</strong> checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.
+            </p>
+            <p class="text-xl mb-5">
+                <strong>find() </strong>is a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>map()</th>
+                      <th>forEach()</th>
+                      <th>Filter()</th>
+                      <th>Find()</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <th>1</th>
+                      <td>map method receives a function as a parameter. <br>Then it applies it on each element and returns an entirely <br>new array populated with the results of calling the provided function.</td>
+                      <td>forEach() is used to execute the same code on every element in <br>an array but does not change the array and it returns undefined.</td>
+                      <td>filter()checks every element in an array to see <br>if it meets a certain criteria and returns a new array with the elements <br> that return truthy for the criteria.</td>
+                      <td>find()is a search function like the previous but <br>they differ in one small detail this function returns only<br> one match in an array. If in an array is more than one result, the function <br>will return the first that has matched.</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr class="hover">
+                      <th>2</th>
+                      <td>
+                        <br>let cost = [100,400,300,700];<br>
+                            let newCost = cost.map(function(costItem){ return costItem / 10;
+                            });<br>
+                            console.log(newCost);<br>
+                        </p>
+                    </td>
+
+                      <td>
+                        <p>
+                            let food = ['mango','rice','pepper','pear'];<br>
+                        food.forEach(function(foodItem){ console.log('I want to eat '+foodItem);
+                        });<br>
+                        </p>
+                    </td>
+                      <td>
+                        <p>
+                        let cost = [100,400,50,40,700];<br>
+                        let smallCost = cost.filter(function(costItem){ return costItem < 200
+                        });<br>
+                        console.log(smallCost);<br>
+                        </p>
+                        
+                      </td>
+                      <td>
+                        <p>
+                            let cost = [100,400,50,40,700];<br>
+                            let smallCost = cost.find(function(costItem){ return costItem < 200
+                            });<br>
+                            console.log(smallCost);<br>
+                        </p>
+                       
+                    </td>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                      <th>3</th>
+                      <td><img src="./image/map.png" alt="" srcset=""></td>
+                      <td><img src="./image/forEach.png" alt="" srcset=""></td>
+                      <td><img src="./image/filter.png" alt="" srcset=""></td>
+                      <td><img src="./image/find.png" alt="" srcset=""></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            
             <a
               href=""
               class="m-2 underline text-lg decoration-sky-600 hover:decoration-blue-900 hover:text-blue-900 hover:font-semibold"
